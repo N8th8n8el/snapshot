@@ -181,8 +181,10 @@ function registerCypressSnapshot () {
     console.log('human name', name)
     const snapshotName = getSnapshotName(this.test, name)
     const serializer = pickSerializer(json, value)
-    const serialized = serializer(value)
-    setSnapshot(snapshotName, serialized, value)
+    for (let i = 0; i < value.length; i++) {
+      const serialized = serializer([value[i]])
+      setSnapshot(`${snapshotName}_${i}`, serialized, [value[i]])
+    }
 
     // always just pass value
     return value
