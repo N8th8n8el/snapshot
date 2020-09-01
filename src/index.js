@@ -201,7 +201,7 @@ function registerCypressSnapshot () {
       snapshots.__version = Cypress.version
       const s = JSON.stringify(snapshots, null, 2)
       const str = `module.exports = ${s}\n`
-      cy.writeFile(snapshotFileName, str, 'utf-8', { log: false })
+      cy.writeFile(snapshotFileName, str, 'utf-8', { log: true })
     }
   })
 
