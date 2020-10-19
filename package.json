@@ -1,7 +1,7 @@
 {
   "name": "@cypress/snapshot",
   "description": "Adds value / object / DOM element snapshot testing support to Cypress test runner",
-  "version": "0.0.0-development",
+  "version": "0.0.1-development",
   "author": "Gleb Bahmutov <gleb@cypress.io>",
   "bugs": "https://github.com/cypress-io/snapshot/issues",
   "engines": {
